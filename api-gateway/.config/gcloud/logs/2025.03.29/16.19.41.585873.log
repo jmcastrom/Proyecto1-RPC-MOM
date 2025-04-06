@@ -1,0 +1,45 @@
+2025-03-29 16:19:41,618 DEBUG    root            Loaded Command Group: ['gcloud', 'compute']
+2025-03-29 16:19:41,622 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'instances']
+2025-03-29 16:19:41,634 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'instances', 'add_tags']
+2025-03-29 16:19:41,641 DEBUG    root            Running [gcloud.compute.instances.add-tags] with arguments: [--tags: "['api-gateway']", --zone: "us-central1-f", INSTANCE_NAME: "api-gateway"]
+2025-03-29 16:19:41,893 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): compute.googleapis.com:443
+2025-03-29 16:19:42,031 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "GET /compute/v1/projects/silken-quasar-455114-g9/zones/us-central1-f/instances/api-gateway?alt=json HTTP/11" 200 None
+2025-03-29 16:19:42,273 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "POST /compute/v1/projects/silken-quasar-455114-g9/zones/us-central1-f/instances/api-gateway/setTags?alt=json HTTP/11" 200 None
+2025-03-29 16:19:42,274 DEBUG    root            Operations to inspect: [(<Operation
+ id: 6371591992543388529
+ insertTime: '2025-03-29T09:19:42.216-07:00'
+ kind: 'compute#operation'
+ name: 'operation-1743265182046-6317d8decd79a-f4aa006d-7b942eb0'
+ operationType: 'setTags'
+ progress: 0
+ selfLink: 'https://www.googleapis.com/compute/v1/projects/silken-quasar-455114-g9/zones/us-central1-f/operations/operation-1743265182046-6317d8decd79a-f4aa006d-7b942eb0'
+ startTime: '2025-03-29T09:19:42.232-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 1188005042562206316
+ targetLink: 'https://www.googleapis.com/compute/v1/projects/silken-quasar-455114-g9/zones/us-central1-f/instances/api-gateway'
+ user: 'juanmi11102@gmail.com'
+ warnings: []
+ zone: 'https://www.googleapis.com/compute/v1/projects/silken-quasar-455114-g9/zones/us-central1-f'>, 3)]
+2025-03-29 16:19:45,153 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "POST /compute/v1/projects/silken-quasar-455114-g9/zones/us-central1-f/operations/operation-1743265182046-6317d8decd79a-f4aa006d-7b942eb0/wait?alt=json HTTP/11" 200 None
+2025-03-29 16:19:45,154 DEBUG    root            Operations to inspect: [(<Operation
+ endTime: '2025-03-29T09:19:45.107-07:00'
+ id: 6371591992543388529
+ insertTime: '2025-03-29T09:19:42.216-07:00'
+ kind: 'compute#operation'
+ name: 'operation-1743265182046-6317d8decd79a-f4aa006d-7b942eb0'
+ operationType: 'setTags'
+ progress: 100
+ selfLink: 'https://www.googleapis.com/compute/v1/projects/silken-quasar-455114-g9/zones/us-central1-f/operations/operation-1743265182046-6317d8decd79a-f4aa006d-7b942eb0'
+ startTime: '2025-03-29T09:19:42.232-07:00'
+ status: StatusValueValuesEnum(DONE, 0)
+ targetId: 1188005042562206316
+ targetLink: 'https://www.googleapis.com/compute/v1/projects/silken-quasar-455114-g9/zones/us-central1-f/instances/api-gateway'
+ user: 'juanmi11102@gmail.com'
+ warnings: []
+ zone: 'https://www.googleapis.com/compute/v1/projects/silken-quasar-455114-g9/zones/us-central1-f'>, 3)]
+2025-03-29 16:19:45,154 INFO     ___FILE_ONLY___ Updated [https://www.googleapis.com/compute/v1/projects/silken-quasar-455114-g9/zones/us-central1-f/instances/api-gateway].
+
+2025-03-29 16:19:45,260 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "GET /compute/v1/projects/silken-quasar-455114-g9/zones/us-central1-f/instances/api-gateway?alt=json HTTP/11" 200 None
+2025-03-29 16:19:45,264 DEBUG    root            Chosen display Format:none
+2025-03-29 16:19:45,265 INFO     root            Display format: "none"
+2025-03-29 16:19:45,286 DEBUG    root            SDK update checks are disabled.

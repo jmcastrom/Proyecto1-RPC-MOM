@@ -1,0 +1,138 @@
+2025-03-29 16:16:18,179 DEBUG    root            Loaded Command Group: ['gcloud', 'compute']
+2025-03-29 16:16:18,182 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'firewall_rules']
+2025-03-29 16:16:18,193 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'firewall-rules', 'list']
+2025-03-29 16:16:18,200 DEBUG    root            Running [gcloud.compute.firewall-rules.list] with arguments: [--format: "table(name,network,direction,priority,sourceRanges,allowed,targetTags)"]
+2025-03-29 16:16:18,469 DEBUG    root            Chosen display Format:    table(
+      name,
+      network.basename(),
+      direction,
+      priority,
+      allowed[].map().firewall_rule().list():label=ALLOW,
+      denied[].map().firewall_rule().list():label=DENY,
+      disabled
+    ) table(name,network,direction,priority,sourceRanges,allowed,targetTags)
+2025-03-29 16:16:18,470 INFO     root            Display format: "    table(
+      name,
+      network.basename(),
+      direction,
+      priority,
+      allowed[].map().firewall_rule().list():label=ALLOW,
+      denied[].map().firewall_rule().list():label=DENY,
+      disabled
+    ) table(name,network,direction,priority,sourceRanges,allowed,targetTags)"
+2025-03-29 16:16:18,473 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): compute.googleapis.com:443
+2025-03-29 16:16:18,666 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "GET /compute/v1/projects/silken-quasar-455114-g9/global/firewalls?alt=json&maxResults=500 HTTP/11" 200 None
+2025-03-29 16:16:18,697 INFO     root            cache collection=compute.firewalls api_version=v1 params=['project', 'firewall']
+2025-03-29 16:16:18,748 INFO     ___FILE_ONLY___ NAME
+2025-03-29 16:16:18,748 INFO     ___FILE_ONLY___                     
+2025-03-29 16:16:18,748 INFO     ___FILE_ONLY___ NETWORK
+2025-03-29 16:16:18,748 INFO     ___FILE_ONLY___   
+2025-03-29 16:16:18,748 INFO     ___FILE_ONLY___ DIRECTION
+2025-03-29 16:16:18,748 INFO     ___FILE_ONLY___   
+2025-03-29 16:16:18,748 INFO     ___FILE_ONLY___ PRIORITY
+2025-03-29 16:16:18,748 INFO     ___FILE_ONLY___   
+2025-03-29 16:16:18,748 INFO     ___FILE_ONLY___ SOURCE_RANGES
+2025-03-29 16:16:18,749 INFO     ___FILE_ONLY___      
+2025-03-29 16:16:18,749 INFO     ___FILE_ONLY___ ALLOWED
+2025-03-29 16:16:18,749 INFO     ___FILE_ONLY___                                                                                                              
+2025-03-29 16:16:18,749 INFO     ___FILE_ONLY___ TARGET_TAGS
+2025-03-29 16:16:18,749 INFO     ___FILE_ONLY___ 
+
+2025-03-29 16:16:18,749 INFO     ___FILE_ONLY___ allow-api-gateway
+2025-03-29 16:16:18,749 INFO     ___FILE_ONLY___        
+2025-03-29 16:16:18,749 INFO     ___FILE_ONLY___ default
+2025-03-29 16:16:18,749 INFO     ___FILE_ONLY___   
+2025-03-29 16:16:18,749 INFO     ___FILE_ONLY___ INGRESS
+2025-03-29 16:16:18,749 INFO     ___FILE_ONLY___     
+2025-03-29 16:16:18,749 INFO     ___FILE_ONLY___ 1000
+2025-03-29 16:16:18,750 INFO     ___FILE_ONLY___       
+2025-03-29 16:16:18,750 INFO     ___FILE_ONLY___ ['0.0.0.0/0']
+2025-03-29 16:16:18,750 INFO     ___FILE_ONLY___      
+2025-03-29 16:16:18,750 INFO     ___FILE_ONLY___ [{'IPProtocol': 'tcp', 'ports': ['80', '8080', '8081']}]
+2025-03-29 16:16:18,750 INFO     ___FILE_ONLY___                                                             
+2025-03-29 16:16:18,750 INFO     ___FILE_ONLY___ ['api-gateway']
+2025-03-29 16:16:18,750 INFO     ___FILE_ONLY___ 
+
+2025-03-29 16:16:18,750 INFO     ___FILE_ONLY___ default-allow-http
+2025-03-29 16:16:18,750 INFO     ___FILE_ONLY___       
+2025-03-29 16:16:18,750 INFO     ___FILE_ONLY___ default
+2025-03-29 16:16:18,750 INFO     ___FILE_ONLY___   
+2025-03-29 16:16:18,750 INFO     ___FILE_ONLY___ INGRESS
+2025-03-29 16:16:18,751 INFO     ___FILE_ONLY___     
+2025-03-29 16:16:18,751 INFO     ___FILE_ONLY___ 1000
+2025-03-29 16:16:18,751 INFO     ___FILE_ONLY___       
+2025-03-29 16:16:18,751 INFO     ___FILE_ONLY___ ['0.0.0.0/0']
+2025-03-29 16:16:18,751 INFO     ___FILE_ONLY___      
+2025-03-29 16:16:18,751 INFO     ___FILE_ONLY___ [{'IPProtocol': 'tcp', 'ports': ['80']}]
+2025-03-29 16:16:18,751 INFO     ___FILE_ONLY___                                                                             
+2025-03-29 16:16:18,751 INFO     ___FILE_ONLY___ ['http-server']
+2025-03-29 16:16:18,751 INFO     ___FILE_ONLY___ 
+
+2025-03-29 16:16:18,751 INFO     ___FILE_ONLY___ default-allow-https
+2025-03-29 16:16:18,751 INFO     ___FILE_ONLY___      
+2025-03-29 16:16:18,751 INFO     ___FILE_ONLY___ default
+2025-03-29 16:16:18,752 INFO     ___FILE_ONLY___   
+2025-03-29 16:16:18,752 INFO     ___FILE_ONLY___ INGRESS
+2025-03-29 16:16:18,752 INFO     ___FILE_ONLY___     
+2025-03-29 16:16:18,752 INFO     ___FILE_ONLY___ 1000
+2025-03-29 16:16:18,752 INFO     ___FILE_ONLY___       
+2025-03-29 16:16:18,752 INFO     ___FILE_ONLY___ ['0.0.0.0/0']
+2025-03-29 16:16:18,752 INFO     ___FILE_ONLY___      
+2025-03-29 16:16:18,752 INFO     ___FILE_ONLY___ [{'IPProtocol': 'tcp', 'ports': ['443']}]
+2025-03-29 16:16:18,752 INFO     ___FILE_ONLY___                                                                            
+2025-03-29 16:16:18,752 INFO     ___FILE_ONLY___ ['https-server']
+2025-03-29 16:16:18,752 INFO     ___FILE_ONLY___ 
+
+2025-03-29 16:16:18,752 INFO     ___FILE_ONLY___ default-allow-icmp
+2025-03-29 16:16:18,752 INFO     ___FILE_ONLY___       
+2025-03-29 16:16:18,753 INFO     ___FILE_ONLY___ default
+2025-03-29 16:16:18,753 INFO     ___FILE_ONLY___   
+2025-03-29 16:16:18,753 INFO     ___FILE_ONLY___ INGRESS
+2025-03-29 16:16:18,753 INFO     ___FILE_ONLY___     
+2025-03-29 16:16:18,753 INFO     ___FILE_ONLY___ 65534
+2025-03-29 16:16:18,753 INFO     ___FILE_ONLY___      
+2025-03-29 16:16:18,753 INFO     ___FILE_ONLY___ ['0.0.0.0/0']
+2025-03-29 16:16:18,753 INFO     ___FILE_ONLY___      
+2025-03-29 16:16:18,753 INFO     ___FILE_ONLY___ [{'IPProtocol': 'icmp'}]
+2025-03-29 16:16:18,753 INFO     ___FILE_ONLY___ 
+
+2025-03-29 16:16:18,753 INFO     ___FILE_ONLY___ default-allow-internal
+2025-03-29 16:16:18,753 INFO     ___FILE_ONLY___   
+2025-03-29 16:16:18,753 INFO     ___FILE_ONLY___ default
+2025-03-29 16:16:18,753 INFO     ___FILE_ONLY___   
+2025-03-29 16:16:18,754 INFO     ___FILE_ONLY___ INGRESS
+2025-03-29 16:16:18,754 INFO     ___FILE_ONLY___     
+2025-03-29 16:16:18,754 INFO     ___FILE_ONLY___ 65534
+2025-03-29 16:16:18,754 INFO     ___FILE_ONLY___      
+2025-03-29 16:16:18,754 INFO     ___FILE_ONLY___ ['10.128.0.0/9']
+2025-03-29 16:16:18,754 INFO     ___FILE_ONLY___   
+2025-03-29 16:16:18,754 INFO     ___FILE_ONLY___ [{'IPProtocol': 'tcp', 'ports': ['0-65535']}, {'IPProtocol': 'udp', 'ports': ['0-65535']}, {'IPProtocol': 'icmp'}]
+2025-03-29 16:16:18,754 INFO     ___FILE_ONLY___ 
+
+2025-03-29 16:16:18,754 INFO     ___FILE_ONLY___ default-allow-rdp
+2025-03-29 16:16:18,754 INFO     ___FILE_ONLY___        
+2025-03-29 16:16:18,754 INFO     ___FILE_ONLY___ default
+2025-03-29 16:16:18,754 INFO     ___FILE_ONLY___   
+2025-03-29 16:16:18,754 INFO     ___FILE_ONLY___ INGRESS
+2025-03-29 16:16:18,754 INFO     ___FILE_ONLY___     
+2025-03-29 16:16:18,754 INFO     ___FILE_ONLY___ 65534
+2025-03-29 16:16:18,755 INFO     ___FILE_ONLY___      
+2025-03-29 16:16:18,755 INFO     ___FILE_ONLY___ ['0.0.0.0/0']
+2025-03-29 16:16:18,755 INFO     ___FILE_ONLY___      
+2025-03-29 16:16:18,755 INFO     ___FILE_ONLY___ [{'IPProtocol': 'tcp', 'ports': ['3389']}]
+2025-03-29 16:16:18,755 INFO     ___FILE_ONLY___ 
+
+2025-03-29 16:16:18,755 INFO     ___FILE_ONLY___ default-allow-ssh
+2025-03-29 16:16:18,755 INFO     ___FILE_ONLY___        
+2025-03-29 16:16:18,755 INFO     ___FILE_ONLY___ default
+2025-03-29 16:16:18,755 INFO     ___FILE_ONLY___   
+2025-03-29 16:16:18,755 INFO     ___FILE_ONLY___ INGRESS
+2025-03-29 16:16:18,755 INFO     ___FILE_ONLY___     
+2025-03-29 16:16:18,755 INFO     ___FILE_ONLY___ 65534
+2025-03-29 16:16:18,755 INFO     ___FILE_ONLY___      
+2025-03-29 16:16:18,755 INFO     ___FILE_ONLY___ ['0.0.0.0/0']
+2025-03-29 16:16:18,756 INFO     ___FILE_ONLY___      
+2025-03-29 16:16:18,756 INFO     ___FILE_ONLY___ [{'IPProtocol': 'tcp', 'ports': ['22']}]
+2025-03-29 16:16:18,756 INFO     ___FILE_ONLY___ 
+
+2025-03-29 16:16:18,756 DEBUG    root            SDK update checks are disabled.
