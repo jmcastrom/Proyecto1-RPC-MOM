@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+e71830303af85fff2c396f98457d63e9 inventory_client.pb.cc
+adbf252af118e817e5b6d105b31ef6b6 orders_service.pb.cc

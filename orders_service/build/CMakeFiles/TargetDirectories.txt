@@ -1,0 +1,3 @@
+/mnt/c/Users/ndrox/OneDrive/Documentos/Libreria/orders/build/CMakeFiles/orders_server.dir
+/mnt/c/Users/ndrox/OneDrive/Documentos/Libreria/orders/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/ndrox/OneDrive/Documentos/Libreria/orders/build/CMakeFiles/rebuild_cache.dir
