@@ -1,0 +1,37 @@
+{
+    "b1": {
+        "author": "Miguel de Cervantes",
+        "isbn": "9780099469698",
+        "price": 15.99,
+        "stock": 4,
+        "title": "Don Quixote"
+    },
+    "b2": {
+        "author": "George Orwell",
+        "isbn": "9780451524935",
+        "price": 12.99,
+        "stock": 12,
+        "title": "1984"
+    },
+    "b3": {
+        "author": "Harper Lee",
+        "isbn": "9780061120084",
+        "price": 14.5,
+        "stock": 11,
+        "title": "To Kill a Mockingbird"
+    },
+    "b4": {
+        "author": "F. Scott Fitzgerald",
+        "isbn": "9780743273565",
+        "price": 11.99,
+        "stock": 12,
+        "title": "The Great Gatsby"
+    },
+    "b5": {
+        "author": "Gabriel García Márquez",
+        "isbn": "9780060883287",
+        "price": 16.75,
+        "stock": 0,
+        "title": "One Hundred Years of Solitude"
+    }
+}

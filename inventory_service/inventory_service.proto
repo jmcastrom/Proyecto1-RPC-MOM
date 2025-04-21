@@ -1,0 +1,62 @@
+// inventory_service.proto
+syntax = "proto3";
+
+package inventory;
+
+service InventoryService {
+  rpc GetBook (BookRequest) returns (BookResponse) {}
+  rpc SearchBooks (SearchRequest) returns (SearchResponse) {}
+  rpc UpdateStock (UpdateStockRequest) returns (UpdateStockResponse) {}
+
+  // Nuevas funciones
+  rpc AddBook (Book) returns (BookResponse) {}
+  rpc DeleteBook (BookRequest) returns (UpdateStockResponse) {}
+}
+
+// Para solicitar un libro por ID
+message BookRequest {
+  string book_id = 1;
+}
+
+// Respuesta con información del libro
+message BookResponse {
+  string book_id = 1;
+  string title = 2;
+  string author = 3;
+  string isbn = 4;
+  int32 stock = 5;
+  double price = 6;
+}
+
+// Nuevo: Objeto completo para AddBook
+message Book {
+  string book_id = 1;
+  string title = 2;
+  string author = 3;
+  string isbn = 4;
+  int32 stock = 5;
+  double price = 6;
+}
+
+message SearchRequest {
+  string query = 1;
+  int32 page = 2;
+  int32 page_size = 3;
+}
+
+message SearchResponse {
+  repeated BookResponse books = 1;
+  int32 total_results = 2;
+}
+
+message UpdateStockRequest {
+  string book_id = 1;
+  int32 quantity_change = 2;
+}
+
+message UpdateStockResponse {
+  bool success = 1;
+  int32 new_stock = 2;
+  string message = 3;
+}
+ 
