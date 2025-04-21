@@ -1,0 +1,3 @@
+/home/ubuntu/mom/mom-dir/build/CMakeFiles/mom.dir
+/home/ubuntu/mom/mom-dir/build/CMakeFiles/edit_cache.dir
+/home/ubuntu/mom/mom-dir/build/CMakeFiles/rebuild_cache.dir
