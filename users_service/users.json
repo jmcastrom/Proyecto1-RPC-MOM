@@ -1,0 +1,101 @@
+{
+  "0M0MV91I": {
+    "UserID": "0M0MV91I",
+    "Username": "juanmi22",
+    "Email": "juanmi@lupe",
+    "FullName": "juanmiguel",
+    "Address": "av54",
+    "Password": "fe2592b42a727e977f055947385b709cc82b16b9a87f88c6abf3900d65d0cdc3",
+    "CreatedAt": "2025-04-21 11:07:10"
+  },
+  "2RI65D9X": {
+    "UserID": "2RI65D9X",
+    "Username": "ejemplo1",
+    "Email": "ejemplo1@correo.com",
+    "FullName": "Usuario Ejemplo",
+    "Address": "Carrera 45 #123",
+    "Password": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
+    "CreatedAt": "2025-04-21 07:58:56"
+  },
+  "3JR382BU": {
+    "UserID": "3JR382BU",
+    "Username": "ejemploNuevo123",
+    "Email": "ejemploNuevoqwe@correo.com",
+    "FullName": "Juan Nuevo",
+    "Address": "Calle 99",
+    "Password": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
+    "CreatedAt": "2025-04-21 08:10:39"
+  },
+  "49SH5MTF": {
+    "UserID": "49SH5MTF",
+    "Username": "miguelito",
+    "Email": "migue@21",
+    "FullName": "juanmiguel",
+    "Address": "av46a",
+    "Password": "fe2592b42a727e977f055947385b709cc82b16b9a87f88c6abf3900d65d0cdc3",
+    "CreatedAt": "2025-04-21 09:06:55"
+  },
+  "5T8JQVLI": {
+    "UserID": "5T8JQVLI",
+    "Username": "juanmi041",
+    "Email": "juanmi@rmail",
+    "FullName": "juan miguel",
+    "Address": "av45",
+    "Password": "fe2592b42a727e977f055947385b709cc82b16b9a87f88c6abf3900d65d0cdc3",
+    "CreatedAt": "2025-04-21 10:36:17"
+  },
+  "LNG1XWA9": {
+    "UserID": "LNG1XWA9",
+    "Username": "ejemploNuevo",
+    "Email": "ejemploNuevo@correo.com",
+    "FullName": "Juan Nuevo",
+    "Address": "Calle 99",
+    "Password": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
+    "CreatedAt": "2025-04-21 08:07:40"
+  },
+  "M6VRYCHS": {
+    "UserID": "M6VRYCHS",
+    "Username": "juanmi_test765",
+    "Email": "juanmi765@correo.com",
+    "FullName": "Juan Miguel",
+    "Address": "Calle 123",
+    "Password": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
+    "CreatedAt": "2025-04-21 07:55:12"
+  },
+  "OAUF9NJD": {
+    "UserID": "OAUF9NJD",
+    "Username": "juanmi",
+    "Email": "mig@juan",
+    "FullName": "juanmicastro",
+    "Address": "av45",
+    "Password": "fe2592b42a727e977f055947385b709cc82b16b9a87f88c6abf3900d65d0cdc3",
+    "CreatedAt": "2025-04-21 08:51:05"
+  },
+  "U12345": {
+    "UserID": "U12345",
+    "Username": "johndoe",
+    "Email": "john@example.com",
+    "FullName": "John Doe",
+    "Address": "123 Main St, Anytown",
+    "Password": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+    "CreatedAt": "2023-01-01 10:00:00"
+  },
+  "U67890": {
+    "UserID": "U67890",
+    "Username": "janedoe",
+    "Email": "jane@example.com",
+    "FullName": "Jane Doe",
+    "Address": "456 Elm St, Othertown",
+    "Password": "8d1d077f4ec09b94dbd42cf6c6b4a76f66ad1e12d50a710c6fd7f9630e2b4d51",
+    "CreatedAt": "2023-01-02 11:00:00"
+  },
+  "WYO5QADK": {
+    "UserID": "WYO5QADK",
+    "Username": "ejemploNuev123o",
+    "Email": "nuevo@email.com",
+    "FullName": "Nombre Actualizado",
+    "Address": "Calle Nueva 456",
+    "Password": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
+    "CreatedAt": "2025-04-21 08:16:15"
+  }
+}
