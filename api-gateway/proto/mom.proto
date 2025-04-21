@@ -1,0 +1,161 @@
+syntax = "proto3";
+
+package mom;
+
+service MomService {
+  // Inventory
+  rpc GetBook (BookRequest) returns (BookResponse);
+  rpc SearchBooks (SearchRequest) returns (SearchResponse);
+  rpc UpdateStock (UpdateStockRequest) returns (UpdateStockResponse);
+  
+  // Users
+  rpc RegisterUser (RegisterRequest) returns (UserResponse);
+  rpc AuthenticateUser (AuthRequest) returns (AuthResponse);
+  rpc GetUser (GetUserRequest) returns (UserResponse);
+  rpc UpdateUser (UpdateUserRequest) returns (UserResponse);
+
+  // Orders
+  rpc CreateOrder (CreateOrderRequest) returns (OrderResponse);
+  rpc GetOrder (GetOrderRequest) returns (OrderResponse);
+  rpc ListOrdersByUser (ListOrdersRequest) returns (ListOrdersResponse);
+}
+
+// Inventory messages
+
+message Book {
+  string book_id = 1;
+  string title = 2;
+  string author = 3;
+  string isbn = 4;
+  int32 stock = 5;
+  double price = 6;
+}
+
+message BookRequest {
+  string book_id = 1;
+}
+
+message BookResponse {
+  string book_id = 1;
+  string title = 2;
+  string author = 3;
+  string isbn = 4;
+  int32 stock = 5;
+  double price = 6;
+}
+
+message SearchRequest {
+  string query = 1;
+  int32 page = 2;
+  int32 page_size = 3;
+}
+
+message SearchResponse {
+  repeated BookResponse books = 1;
+  int32 total_results = 2;
+}
+
+
+message UpdateStockRequest {
+  string book_id = 1;
+  int32 quantity_change = 2;
+}
+
+message UpdateStockResponse {
+  bool success = 1;
+  int32 new_stock = 2;
+  string message = 3;
+}
+
+
+// Users messages
+message RegisterRequest {
+  string username = 1;
+  string email = 2;
+  string password = 3;
+  string full_name = 4;
+  string address = 5;
+}
+
+message GetUserRequest {
+  string user_id = 1;
+}
+
+message UpdateUserRequest {
+  string user_id = 1;
+  string email = 2;
+  string full_name = 3;
+  string address = 4;
+}
+
+message AuthRequest {
+  string username = 1;
+  string password = 2;
+}
+
+message AuthResponse {
+  bool success = 1;
+  string user_id = 2;
+  string token = 3;
+  string message = 4;
+}
+
+message UserResponse {
+  string user_id = 1;
+  string username = 2;
+  string email = 3;
+  string full_name = 4;
+  string address = 5;
+  string created_at = 6;
+}
+
+// Orders messages
+message OrderItem {
+  string book_id = 1;
+  int32 quantity = 2;
+  double unit_price = 3;
+}
+
+message CreateOrderRequest {
+  string user_id = 1;
+  repeated OrderItem items = 2;
+  string shipping_address = 3;
+}
+
+message GetOrderRequest {
+  string order_id = 1;
+}
+
+message ListOrdersRequest {
+  string user_id = 1;
+  int32 page = 2;
+  int32 page_size = 3;
+}
+
+message OrderResponse {
+  string order_id = 1;
+  string user_id = 2;
+  repeated OrderItem items = 3;
+  double total_amount = 4;
+  string shipping_address = 5;
+  string status = 6;
+  string created_at = 7;
+}
+
+message ListOrdersResponse {
+  repeated OrderResponse orders = 1;
+  int32 total_orders = 2;
+}
+
+message UserIdRequest {
+  string user_id = 1;
+}
+
+message OrderIdRequest {
+  string order_id = 1;
+}
+
+message OrdersList {
+  repeated OrderResponse orders = 1;
+  int32 total_orders = 2;
+}

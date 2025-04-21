@@ -1,0 +1,3 @@
+/home/ubuntu/Proyecto1-RPC-MOM/api-gateway/api/build/CMakeFiles/gateway.dir
+/home/ubuntu/Proyecto1-RPC-MOM/api-gateway/api/build/CMakeFiles/edit_cache.dir
+/home/ubuntu/Proyecto1-RPC-MOM/api-gateway/api/build/CMakeFiles/rebuild_cache.dir
