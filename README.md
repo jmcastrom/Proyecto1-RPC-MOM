@@ -1,6 +1,9 @@
 # Proyecto1-RPC-MOM
 Este proyecto implementa una arquitectura distribuida basada en microservicios, diseñada para ser escalable, resiliente y eficiente en el manejo de peticiones y fallos. La solución aborda los principales desafíos del desarrollo moderno mediante la integración de distintos componentes y tecnologias funcionales.
 
+Una version en video sobre este proyecto puede ser vista en el siguiente enlace: 
+https://youtu.be/Dzy2h7SX1Cc
+
 ## Componentes del proyecto
 -   **API Gateway**: Un punto de entrada centralizado que gestiona todas las peticiones del cliente, aplicando reglas de enrutamiento, autenticación y control de acceso.
     
