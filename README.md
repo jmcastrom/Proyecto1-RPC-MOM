@@ -111,5 +111,136 @@ graph TD
     class MS1,MS2,MS3 microservice
     class MQ queue
     class DB1,DB2,DB3 database
+```
+## Funcionamiento Componentes del Proyecto
+
+- **API Gateway**  
+  Punto de entrada HTTP REST desarrollado en C++ con Crow. Traduce solicitudes HTTP a gRPC y las envía al Middleware MOM.
+  
+- **MOM (Middleware Orientado a Mensajes)**  
+  Servidor gRPC en C++ que enruta las peticiones de la API Gateway hacia los microservicios adecuados según el tipo de operación.
+
+- **Microservicios**  
+  - `inventory`: Gestión de libros (C++, gRPC).
+  - `users`: Gestión de usuarios (Go, gRPC).
+  - `orders`: Gestión de órdenes (C++, gRPC).
+
+- **Cliente**  
+  Aplicación de consola en C++ que interactúa con la API REST usando `curl`.
+
+- **Archivos .proto**  
+  Definen todos los mensajes y servicios gRPC usados entre los componentes.
+
+---
+
+## Desarrollo
+
+### API Gateway
+- Implementado en C++ con Crow.
+- Escucha en el puerto `8081`.
+- Convierte peticiones HTTP JSON en llamadas gRPC.
+- Usa un stub gRPC generado desde `mom.proto`.
+
+### MOM (Middleware)
+- Servidor gRPC que expone el servicio `MomService`.
+- Implementado en `main.cpp` y `mom_routes.cpp`.
+- Recibe llamadas de la API y las reenvía a los microservicios por gRPC.
+
+### Microservicios
+- **inventory** (C++): Permite obtener, buscar, agregar y eliminar libros.
+- **users** (Go): Permite registrar, autenticar y actualizar usuarios.
+- **orders** (C++): Permite crear órdenes y listarlas por usuario.
+- Todos implementan persistencia en JSON local.
+
+### Cliente
+- Menú por consola que permite enviar comandos HTTP a la API.
+- Usa `system()` y `curl` para comunicarse.
+- Simula la experiencia de un consumidor real de la API.
+
+---
+
+## Comunicación entre Componentes
+
+```text
+Cliente (HTTP via curl)
+        ↓
+API Gateway (Crow + gRPC client stub)
+        ↓
+MOM (Servidor gRPC)
+        ↓
+Microservicios (gRPC)
+```
+##  Despliegue
+
+### Infraestructura
+
+Cada componente corre en una instancia EC2 separada (AWS).
+
+Se asignaron puertos específicos para cada servicio:
+
+- **API Gateway**: `8081` (HTTP)
+- **MOM**: `50055` (gRPC)
+- **Inventory**: `50051` (gRPC)
+- **Orders**: `50052` (gRPC)
+- **Users**: `50053` (gRPC)
+
+---
+
+### Seguridad
+
+- Se configuraron reglas de grupo de seguridad (firewall) para permitir únicamente el tráfico necesario entre instancias.
+- Se utilizaron **IP's elásticas asignadas** para garantizar disponibilidad.
+
+---
+
+## Compilación y Ejecución
+
+### Cliente
+
+```bash
+g++ client.cpp -o cliente
+./cliente
+```
+
+### API Gateway
+
+```bash
+cd api-gateway
+mkdir build && cd build
+cmake ..
+make
+./gateway
+```
+
+
+### Middleware (MOM)
+
+```bash
+cd mom
+mkdir build && cd build
+cmake ..
+make
+./mom
+```
+### Microservicios
+
+### Inventory / Orders (C++)
+
+```bash
+mkdir build && cd build
+cmake ..
+make
+./inventory_service   # o ./orders_service
+```
+
+### Users (Go)
+
+```bash
+cd users
+go run main.go
+```
+
+
+
 
 
